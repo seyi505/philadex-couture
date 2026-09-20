@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0c0c0c;
+    color: #f4f0e8;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 90px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292929;
+    background: #0c0c0c;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    letter-spacing: 5px;
+    color: #c9a66b;
+    text-align: center;
+    margin-top: -3px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav a {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c9c5bd;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #c9a66b;
+}
+
+.header-btn {
+    border: 1px solid #c9a66b;
+    color: #c9a66b;
+    padding: 13px 22px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #c9a66b;
+    color: #0c0c0c;
+}
+
+.eyebrow {
+    color: #c9a66b;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+em {
+    color: #c9a66b;
+    font-style: italic;
+}
+
+.hero {
+    min-height: 720px;
+    padding: 80px 7%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 80px;
+    background:
+        radial-gradient(circle at 70% 40%, #252017 0%, #0c0c0c 45%);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 8vw, 120px);
+    line-height: 0.85;
+    margin-bottom: 35px;
+}
+
+.hero-description {
+    color: #a9a59e;
+    max-width: 500px;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.gold-btn {
+    display: inline-block;
+    background: #c9a66b;
+    color: #0c0c0c;
+    padding: 16px 27px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.gold-btn:hover {
+    background: #f0d19a;
+    transform: translateY(-3px);
+}
+
+.text-btn {
+    color: #ddd5c8;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.text-btn:hover {
+    color: #c9a66b;
+}
+
+
+.hero-visual {
+    position: relative;
+}
+
+.fashion-image {
+    height: 530px;
+    background:
+        linear-gradient(
+            145deg,
+            #d2b98c,
+            #756044 45%,
+            #1b1711
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;;
+}
+
+.fashion-image::before {
+    content: "";
+    position: absolute;
+    inset: 25px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.image-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.image-content p {
+    letter-spacing: 9px;
+    font-size: 14px;
+}
+
+.image-content h2 {
+    font-size: 65px;
+    letter-spacing: 7px;
+}
+
+.image-content span {
+    font-size: 8px;
+    letter-spacing: 4px;
+}
+
+
+
+.about {
+    padding: 140px 7%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 70px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-number {
+    color: #5f5a52;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+}
+
+.about-content {
+    max-width: 800px;
+}
+
+.about h2 {
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 0.95;
+    margin-bottom: 35px;
+}
+
+.about-content > p:not(.eyebrow) {
+    color: #99958e;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.line-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #c9a66b;
+    color: #c9a66b;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.services {
+    padding: 120px 7%;
+    background: #f1ede5;
+    color: #171512;
+}
+
+.section-top {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 50px;
+}
+
+.section-top .eyebrow {
+    color: #967442;
+}
+
+.section-top h2 {
+    font-size: clamp(50px, 6vw, 75px);
+    line-height: 0.9;
+}
+
+.section-intro {
+    max-width: 360px;
+    color: #77736c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.service-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.service-card {
+    min-height: 360px;
+    padding: 35px 25px;
+    border: 1px solid #d5d0c6;
+    position: relative;
+    transition: 0.4s;
+}
+
+.service-card:hover {
+    background: #191816;
+    color: #fff;
+    transform: translateY(-8px);
+}
+
+.service-card.featured {
+    background: #191816;
+    color: #fff;
+}
+.service-cards{
+    background-color: blueviolet;
+    transition: 0.4s ;
+    padding: 35px 25px;
+    border: 1px solid #d5d0c6;
+    position: relative;
+    min-height: 360px;
+}
+.service-cards:hover{
+    background: #191816;
+    color: #fff;
+    transform: translateY(-8px);
+}
+#card-number{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #aaa49b;
+    font-size: 10px;
+}
+#card-icon{
+    color: #b18b53;
+    font-size: 32px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+.service-cards h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.service-cards p {
+    color: #8d8981;
+    font-size: 12px;
+    line-height: 1.8;
+}
+.service-cards a{
+    position: absolute;
+    bottom: 30px;
+    color: #b18b53;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#card-number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #aaa49b;
+    font-size: 10px;
+}
+
+#card-icon {
+    color: #b18b53;
+    font-size: 32px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #8d8981;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.service-card a {
+    position: absolute;
+    bottom: 30px;
+    color: #b18b53;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+
+.academy {
+    min-height: 650px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    background:
+        linear-gradient(
+            120deg,
+            #111 0%,
+            #211c15 50%,
+            #111 100%
+        );
+}
+
+.academy-content {
+    max-width: 650px;
+}
+
+.academy h2 {
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.academy-content > p:not(.eyebrow) {
+    color: #a7a29a;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.academy-stamp {
+    width: 230px;
+    height: 230px;
+    border: 1px solid #c9a66b;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c9a66b;
+    transform: rotate(-15deg);
+}
+
+.academy-stamp strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 65px;
+}
+
+.academy-stamp span {
+    font-size: 8px;
+    letter-spacing: 4px;
+}
+
+
+.quote {
+    padding: 130px 7%;
+    text-align: center;
+    background: #f1ede5;
+    color: #171512;
+}
+
+.quote p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(35px, 5vw, 60px);
+    font-style: italic;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1;
+}
+
+.quote span {
+    display: block;
+    color: #967442;
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-top: 30px;
+}
+
+
+.contact {
+    padding: 130px 7%;
+    text-align: center;
+}
+
+.contact-heading {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.contact-heading > p:last-child {
+    max-width: 550px;
+    margin: auto auto 40px;
+    color: #99958e;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px 0;
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.contact-details span {
+    display: block;
+    color: #c9a66b;
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: #ccc7be;
+    font-size: 12px;
+}
+
+
+footer {
+    padding: 60px 7%;
+    text-align: center;
+    border-top: 1px solid #292929;
+}
+
+.footer-logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.footer-logo span {
+    color: #c9a66b;
+}
+
+footer > p {
+    color: #77736c;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.footer-line {
+    width: 50px;
+    height: 1px;
+    background: #c9a66b;
+    margin: 30px auto;
+}
+
+.copyright {
+    font-size: 8px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .nav {
+        gap: 18px;
+    }
+
+    .header-btn {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .academy {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .academy-content {
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 75px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    
